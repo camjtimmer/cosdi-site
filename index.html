@@ -15,6 +15,13 @@
 <!-- noise overlay -->
 <div class="noise" aria-hidden="true"></div>
 
+<!-- custom cursor -->
+<div class="cursor" id="cursor" aria-hidden="true"></div>
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+<!-- fake approval stamp -->
+<div class="stamp" aria-hidden="true">GRADE A<br/>NONSENSE<br/>★ SINCE ★<br/>WHENEVER</div>
+
 <!-- floating lightning bolts decor -->
 <svg class="bolt bolt-1" viewBox="0 0 40 80" aria-hidden="true"><path d="M22 0 L0 48 L14 48 L8 80 L40 28 L24 28 Z" fill="currentColor"/></svg>
 <svg class="bolt bolt-2" viewBox="0 0 40 80" aria-hidden="true"><path d="M22 0 L0 48 L14 48 L8 80 L40 28 L24 28 Z" fill="currentColor"/></svg>
@@ -38,6 +45,18 @@
 
 <!-- HERO -->
 <section class="hero">
+  <!-- orbit ring -->
+  <svg class="orbit" viewBox="0 0 340 340" aria-hidden="true">
+    <defs>
+      <path id="orbitPath" d="M 170,170 m -140,0 a 140,140 0 1,1 280,0 a 140,140 0 1,1 -280,0"/>
+    </defs>
+    <text><textPath href="#orbitPath">★ GRAND RAPIDS ★ MICHIGAN ★ CRITERIUM ★ RACING ★ GRAND RAPIDS ★ MICHIGAN ★</textPath></text>
+  </svg>
+
+  <!-- hero stickers -->
+  <div class="sticker wobble" style="top:30px;right:6%">PIN IT!</div>
+  <div class="sticker red" style="bottom:60px;left:4%">!!!</div>
+
   <div class="hero-stack">
     <h1 class="wordmark" aria-label="COSDI">
       <span class="w w1">C</span><span class="w w2">O</span><span class="w w3">S</span><span class="w w4">D</span><span class="w w5">I</span>
@@ -63,6 +82,7 @@
 
 <!-- ABOUT -->
 <section class="about">
+  <div class="sticker orange" style="top:40px;right:8%">HOLD MY BEER</div>
   <div class="about-grid">
     <div class="about-left">
       <p class="section-kicker">// WHO</p>
@@ -77,28 +97,31 @@
 
 <!-- RACES -->
 <section class="races" id="races">
+  <div class="sticker navy wobble" style="top:50px;right:5%">DON'T CRASH</div>
+  <div class="sticker teal" style="bottom:80px;left:4%">42 × 16</div>
   <div class="sec-head">
     <p class="section-kicker">// 2026 SCHEDULE</p>
     <h2 class="big-head">RACES<span class="arr">→</span></h2>
   </div>
   <div class="race-list">
-    <div class="race"><span class="race-date">APR 18</span><span class="race-name">BARRY-ROUBAIX</span><span class="race-disc">GRAVEL</span><span class="race-loc">HASTINGS, MI</span></div>
-    <div class="race"><span class="race-date">MAY 02</span><span class="race-name">LOWELL 50</span><span class="race-disc">GRAVEL</span><span class="race-loc">LOWELL, MI</span></div>
-    <div class="race"><span class="race-date">MAY 30</span><span class="race-name">GRAVEL METRIC</span><span class="race-disc">GRAVEL</span><span class="race-loc">DEKALB, IL</span></div>
-    <div class="race"><span class="race-date">JUN 13</span><span class="race-name">MAPLE HILL GRAVEL</span><span class="race-disc">GRAVEL</span><span class="race-loc">ADA, MI</span></div>
-    <div class="race"><span class="race-date">JUL 11</span><span class="race-name">CRUSHER IN THE TUSHAR</span><span class="race-disc">GRAVEL</span><span class="race-loc">BEAVER, UT</span></div>
-    <div class="race"><span class="race-date">AUG 08</span><span class="race-name">CHICAGO GRIT</span><span class="race-disc">GRAVEL</span><span class="race-loc">CHICAGO, IL</span></div>
-    <div class="race"><span class="race-date">AUG 22</span><span class="race-name">RAD GRAVEL</span><span class="race-disc">GRAVEL</span><span class="race-loc">WELLSTON, MI</span></div>
-    <div class="race"><span class="race-date">SEP 12</span><span class="race-name">MARJI GESICK</span><span class="race-disc">MTB</span><span class="race-loc">ISHPEMING, MI</span></div>
-    <div class="race"><span class="race-date">OCT 03</span><span class="race-name">PEAK 2 PEAK</span><span class="race-disc">MTB</span><span class="race-loc">BELLAIRE, MI</span></div>
-    <div class="race"><span class="race-date">OCT 17</span><span class="race-name">COAST TO COAST</span><span class="race-disc">GRAVEL</span><span class="race-loc">MONTAGUE, MI</span></div>
-    <div class="race"><span class="race-date">NOV 07</span><span class="race-name">ICEMAN COMETH</span><span class="race-disc">MTB</span><span class="race-loc">TRAVERSE CITY, MI</span></div>
+    <div class="race"><span class="race-date">MAY 02</span><span class="race-name">GR SPRING CRIT</span><span class="race-disc">CRIT</span><span class="race-loc">GRAND RAPIDS, MI</span></div>
+    <div class="race"><span class="race-date">MAY 23</span><span class="race-name">SNAKE ALLEY CRIT</span><span class="race-disc">CRIT</span><span class="race-loc">BURLINGTON, IA</span></div>
+    <div class="race"><span class="race-date">JUN 13</span><span class="race-name">TULSA TOUGH</span><span class="race-disc">CRIT</span><span class="race-loc">TULSA, OK</span></div>
+    <div class="race"><span class="race-date">JUN 20</span><span class="race-name">TOUR OF AMERICA&rsquo;S DAIRYLAND</span><span class="race-disc">CRIT</span><span class="race-loc">WISCONSIN</span></div>
+    <div class="race race-tdf"><span class="race-date">JUL 04</span><span class="race-name">TOUR DE FRANCE<sup>*</sup></span><span class="race-disc">GRAND TOUR</span><span class="race-loc">FRANCE</span></div>
+    <div class="race"><span class="race-date">JUL 18</span><span class="race-name">INTELLIGENTSIA CUP</span><span class="race-disc">CRIT</span><span class="race-loc">CHICAGO, IL</span></div>
+    <div class="race"><span class="race-date">JUL 25</span><span class="race-name">DOWNERS GROVE CRIT</span><span class="race-disc">CRIT</span><span class="race-loc">DOWNERS GROVE, IL</span></div>
+    <div class="race"><span class="race-date">AUG 08</span><span class="race-name">GLENCOE GRAND PRIX</span><span class="race-disc">CRIT</span><span class="race-loc">GLENCOE, IL</span></div>
+    <div class="race"><span class="race-date">AUG 22</span><span class="race-name">HOLLAND CRITERIUM</span><span class="race-disc">CRIT</span><span class="race-loc">HOLLAND, MI</span></div>
+    <div class="race"><span class="race-date">SEP 05</span><span class="race-name">GATEWAY CUP</span><span class="race-disc">CRIT</span><span class="race-loc">ST. LOUIS, MO</span></div>
+    <div class="race"><span class="race-date">SEP 19</span><span class="race-name">MI STATE CHAMPIONSHIPS</span><span class="race-disc">CRIT</span><span class="race-loc">HOLLAND, MI</span></div>
   </div>
-  <p class="disclaimer">* dates are placeholders — swap in real ones from last year&rsquo;s schedule</p>
+  <p class="disclaimer">* we have not received a Tour de France invitation yet. dates approximate — swap in real ones as they land.</p>
 </section>
 
 <!-- TEAM -->
 <section class="team" id="team">
+  <div class="sticker" style="top:40px;right:7%">ELBOWS OUT</div>
   <div class="sec-head">
     <p class="section-kicker">// ROSTER</p>
     <h2 class="big-head">THE HUMANS<span class="arr">↓</span></h2>
@@ -172,6 +195,7 @@
 
 <!-- PARTNERS -->
 <section class="partners" id="partners">
+  <div class="sticker red wobble" style="top:50px;right:6%">BLESS UP</div>
   <div class="sec-head">
     <p class="section-kicker">// THE PEOPLE WHO KEEP US ROLLING</p>
     <h2 class="big-head">PARTNERS<span class="arr">✦</span></h2>
