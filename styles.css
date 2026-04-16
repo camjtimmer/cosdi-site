@@ -61,11 +61,12 @@ a{color:inherit;text-decoration:none}
   font-family:"Archivo Black",sans-serif;
   font-style:italic;
   font-weight:900;
-  font-size:clamp(120px,22vw,360px);
-  line-height:.85;
+  font-size:clamp(64px,17vw,260px);
+  line-height:.9;
   letter-spacing:-.04em;
   color:var(--navy);
-  display:flex;flex-wrap:wrap;gap:0;
+  display:block;
+  white-space:nowrap;
   text-shadow:6px 6px 0 var(--teal);
 }
 .wordmark .w{display:inline-block;transition:transform .18s ease, color .18s ease}
