@@ -4,33 +4,18 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>COSDI RACING // GR MI</title>
-<meta name="description" content="COSDI Racing — Grand Rapids MI cycling team. Road, gravel, MTB. Since forever. Still at it." />
+<meta name="description" content="COSDI Racing — Grand Rapids, Michigan criterium team." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bowlby+One&family=Space+Mono:wght@400;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono:wght@400;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-<!-- noise overlay -->
-<div class="noise" aria-hidden="true"></div>
-
-<!-- custom cursor -->
-<div class="cursor" id="cursor" aria-hidden="true"></div>
-<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
-
-<!-- fake approval stamp -->
-<div class="stamp" aria-hidden="true">GRADE A<br/>NONSENSE<br/>★ SINCE ★<br/>WHENEVER</div>
-
-<!-- floating lightning bolts decor -->
-<svg class="bolt bolt-1" viewBox="0 0 40 80" aria-hidden="true"><path d="M22 0 L0 48 L14 48 L8 80 L40 28 L24 28 Z" fill="currentColor"/></svg>
-<svg class="bolt bolt-2" viewBox="0 0 40 80" aria-hidden="true"><path d="M22 0 L0 48 L14 48 L8 80 L40 28 L24 28 Z" fill="currentColor"/></svg>
-<svg class="bolt bolt-3" viewBox="0 0 40 80" aria-hidden="true"><path d="M22 0 L0 48 L14 48 L8 80 L40 28 L24 28 Z" fill="currentColor"/></svg>
-
 <!-- TOP BAR -->
 <header class="topbar">
   <div class="topbar-left">
-    <span class="blink">●</span>&nbsp;LIVE FROM GRAND RAPIDS MI
+    <span class="blink">●</span>&nbsp;GRAND RAPIDS / MICHIGAN
   </div>
   <nav class="topnav">
     <a href="#races">RACES</a>
@@ -38,57 +23,43 @@
     <a href="#partners">PARTNERS</a>
     <a href="#connect">CONNECT</a>
   </nav>
-  <div class="topbar-right" id="visitorCounter">👁 VISITORS: <span id="vcount">0000042</span></div>
+  <div class="topbar-right">CRITERIUM RACING</div>
 </header>
-
-<!-- URGENT NEWS TICKER -->
-<div class="news-ticker" aria-hidden="true">
-  <div class="news-inner">
-    <span class="news-label">URGENT</span>
-    <div class="news-track">
-      <span>🚨 COSDI RIDER SEEN BUYING GAS STATION BANANA 14 MIN PRE-RACE ● </span>
-      <span>GROUP RIDE NEUTRALIZED BY DONUT SHOP ● </span>
-      <span>LOCAL CRIT DECIDED BY WHO REMEMBERED SUNSCREEN ● </span>
-      <span>⚡ MYSTERIOUS &ldquo;HOLD MY BEER&rdquo; HEARD ON LAP 12 ● </span>
-      <span>TEAM DIRECTOR DEMANDS EVERYONE LEARN TO CORNER ● </span>
-      <span>NEW BIBS ARRIVED, FIT QUESTIONABLE ● </span>
-      <span>COFFEE CONSUMPTION UP 400% SINCE MARCH ● </span>
-    </div>
-  </div>
-</div>
 
 <!-- HERO -->
 <section class="hero">
-  <!-- hero stickers -->
-  <div class="sticker wobble" style="top:30px;right:6%">PIN IT!</div>
-  <div class="sticker red" style="bottom:60px;left:4%">!!!</div>
+  <div class="hero-shards" aria-hidden="true">
+    <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="0,130 260,90 460,160 720,110 980,180 1240,120 1460,190 1600,150 1600,225 1440,240 1200,260 960,210 720,260 480,215 240,260 0,230" fill="#0a1a2a" fill-opacity=".55"/>
+      <polygon points="0,430 220,400 420,470 640,410 860,490 1080,420 1300,510 1520,440 1600,470 1600,540 1420,580 1200,520 980,580 760,525 540,585 340,525 140,580 0,540" fill="#0a1a2a" fill-opacity=".38"/>
+      <polygon points="0,720 200,680 400,760 600,700 820,780 1040,720 1260,800 1480,740 1600,790 1600,900 0,900" fill="#0a1a2a" fill-opacity=".6"/>
+      <polygon points="1220,60 1320,90 1400,65 1470,100 1520,85 1460,115 1380,110 1300,110 1240,100" fill="#e67e22" fill-opacity=".55"/>
+    </svg>
+  </div>
 
   <div class="hero-stack">
-    <h1 class="wordmark" aria-label="COSDI">
-      <span class="w w1">C</span><span class="w w2">O</span><span class="w w3">S</span><span class="w w4">D</span><span class="w w5">I</span>
-    </h1>
+    <h1 class="wordmark">COSDI</h1>
     <div class="hero-sub">
       <span class="pill">CRIT</span>
-      <span class="pill alt">CORNERS</span>
-      <span class="pill">COFFEE</span>
-      <span class="pill alt">CHAOS</span>
+      <span class="pill alt">ROAD</span>
+      <span class="pill">CORNERS</span>
+      <span class="pill alt">COFFEE</span>
     </div>
     <p class="hero-tag">A <b>Grand Rapids, Michigan</b> criterium team. We go 28 mph in circles for an hour, shout at our friends, and call it a sport. Fast? Yeah. Pro? Absolutely not. Serious? Only at Grattan.</p>
   </div>
 </section>
 
 <!-- MARQUEE -->
-<div class="marquee" role="presentation" aria-hidden="true">
+<div class="marquee" aria-hidden="true">
   <div class="marquee-track">
-    <span>★ CRIT ★ CORNERS ★ ELBOWS ★ COFFEE ★ LYCRA ★ SPRINTS ★ CRITERIUMS ★ VIBES ★</span>
-    <span>★ CRIT ★ CORNERS ★ ELBOWS ★ COFFEE ★ LYCRA ★ SPRINTS ★ CRITERIUMS ★ VIBES ★</span>
-    <span>★ CRIT ★ CORNERS ★ ELBOWS ★ COFFEE ★ LYCRA ★ SPRINTS ★ CRITERIUMS ★ VIBES ★</span>
+    <span>★ CRIT ★ CORNERS ★ ELBOWS ★ COFFEE ★ LYCRA ★ SPRINTS ★ CRITERIUMS ★ GRAND RAPIDS ★</span>
+    <span>★ CRIT ★ CORNERS ★ ELBOWS ★ COFFEE ★ LYCRA ★ SPRINTS ★ CRITERIUMS ★ GRAND RAPIDS ★</span>
+    <span>★ CRIT ★ CORNERS ★ ELBOWS ★ COFFEE ★ LYCRA ★ SPRINTS ★ CRITERIUMS ★ GRAND RAPIDS ★</span>
   </div>
 </div>
 
 <!-- ABOUT -->
 <section class="about">
-  <div class="sticker orange" style="top:40px;right:8%">HOLD MY BEER</div>
   <div class="about-grid">
     <div class="about-left">
       <p class="section-kicker">// WHO</p>
@@ -103,8 +74,6 @@
 
 <!-- RACES -->
 <section class="races" id="races">
-  <div class="sticker navy wobble" style="top:50px;right:5%">DON'T CRASH</div>
-  <div class="sticker teal" style="bottom:80px;left:4%">42 × 16</div>
   <div class="sec-head">
     <p class="section-kicker">// 2026 SCHEDULE</p>
     <h2 class="big-head">RACES<span class="arr">→</span></h2>
@@ -127,7 +96,6 @@
 
 <!-- TEAM -->
 <section class="team" id="team">
-  <div class="sticker" style="top:40px;right:7%">ELBOWS OUT</div>
   <div class="sec-head">
     <p class="section-kicker">// ROSTER</p>
     <h2 class="big-head">THE HUMANS<span class="arr">↓</span></h2>
@@ -143,47 +111,47 @@
       <div class="rider-name">Cameron Timmer</div>
       <div class="rider-meta">Strava →</div>
     </a>
-    <a class="rider" data-strava="#" style="--c1:#e4ff47;--c2:#1b6b7e">
+    <a class="rider" data-strava="#" style="--c1:#0a1a2a;--c2:#1b6b7e">
       <div class="rider-face"><span>CB</span></div>
       <div class="rider-name">Chris Boer</div>
       <div class="rider-meta">Strava →</div>
     </a>
-    <a class="rider" data-strava="#" style="--c1:#ff3d82;--c2:#0a1a2a">
+    <a class="rider" data-strava="#" style="--c1:#1b6b7e;--c2:#2a8ba3">
       <div class="rider-face"><span>DS</span></div>
       <div class="rider-name">Daniel Shamburger</div>
       <div class="rider-meta">Strava →</div>
     </a>
-    <a class="rider" data-strava="#" style="--c1:#1b6b7e;--c2:#e4ff47">
+    <a class="rider" data-strava="#" style="--c1:#0a1a2a;--c2:#e67e22">
       <div class="rider-face"><span>DH</span></div>
       <div class="rider-name">Dave Hietikko</div>
       <div class="rider-meta">Strava →</div>
     </a>
-    <a class="rider" data-strava="#" style="--c1:#0a1a2a;--c2:#e67e22">
+    <a class="rider" data-strava="#" style="--c1:#1b6b7e;--c2:#0a1a2a">
       <div class="rider-face"><span>JS</span></div>
       <div class="rider-name">Jason Swiatlowski</div>
       <div class="rider-meta">Strava →</div>
     </a>
-    <a class="rider" data-strava="#" style="--c1:#e67e22;--c2:#ff3d82">
+    <a class="rider" data-strava="#" style="--c1:#e67e22;--c2:#1b6b7e">
       <div class="rider-face"><span>JP</span></div>
       <div class="rider-name">Joel Poliskey</div>
       <div class="rider-meta">Strava →</div>
     </a>
-    <a class="rider" data-strava="#" style="--c1:#f4ede0;--c2:#0a1a2a">
+    <a class="rider" data-strava="#" style="--c1:#0a1a2a;--c2:#1b6b7e">
       <div class="rider-face"><span>KD</span></div>
       <div class="rider-name">Kyle Dankert</div>
       <div class="rider-meta">Strava →</div>
     </a>
-    <a class="rider" data-strava="#" style="--c1:#1b6b7e;--c2:#f4ede0">
+    <a class="rider" data-strava="#" style="--c1:#2a8ba3;--c2:#0a1a2a">
       <div class="rider-face"><span>NP</span></div>
       <div class="rider-name">Noah Prefontaine</div>
       <div class="rider-meta">Strava →</div>
     </a>
-    <a class="rider" data-strava="#" style="--c1:#ff3d82;--c2:#e4ff47">
+    <a class="rider" data-strava="#" style="--c1:#1b6b7e;--c2:#e67e22">
       <div class="rider-face"><span>RM</span></div>
       <div class="rider-name">Reid Morris</div>
       <div class="rider-meta">Strava →</div>
     </a>
-    <a class="rider" data-strava="#" style="--c1:#e4ff47;--c2:#0a1a2a">
+    <a class="rider" data-strava="#" style="--c1:#0a1a2a;--c2:#2a8ba3">
       <div class="rider-face"><span>TD</span></div>
       <div class="rider-name">Travis Dittmer</div>
       <div class="rider-meta">Strava →</div>
@@ -201,7 +169,6 @@
 
 <!-- PARTNERS -->
 <section class="partners" id="partners">
-  <div class="sticker red wobble" style="top:50px;right:6%">BLESS UP</div>
   <div class="sec-head">
     <p class="section-kicker">// THE PEOPLE WHO KEEP US ROLLING</p>
     <h2 class="big-head">PARTNERS<span class="arr">✦</span></h2>
@@ -218,6 +185,12 @@
 
 <!-- CONNECT -->
 <section class="connect" id="connect">
+  <div class="connect-shards" aria-hidden="true">
+    <svg viewBox="0 0 1600 400" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="0,50 260,30 460,80 720,40 980,90 1240,50 1460,100 1600,70 1600,130 1440,140 1200,170 960,120 720,170 480,130 240,170 0,140" fill="#1b6b7e" fill-opacity=".35"/>
+      <polygon points="0,320 220,290 420,350 640,300 860,360 1080,310 1300,370 1520,320 1600,350 1600,400 0,400" fill="#1b6b7e" fill-opacity=".5"/>
+    </svg>
+  </div>
   <p class="section-kicker">// SAY HI</p>
   <h2 class="email-giant"><a href="mailto:info@cosdiracing.com">info@cosdiracing.com</a></h2>
   <div class="socials">
@@ -234,8 +207,6 @@
     <div class="foot-bolt">⚡</div>
     <div>MADE IN GR, MI</div>
   </div>
-  <pre class="peloton" aria-hidden="true">🚴💨 🚴 🚴💨 🚴 🚴💨 🚴 🚴💨 🚴 🚴💨 🚴 🚴💨 🚴 🚴💨 🚴</pre>
-  <pre class="hrbar" aria-hidden="true">HR ▁▂▃▅▆▇█▇▆▅▃▂▁▂▃▅▆▇█▇▆▅▃▂▁▂▃▅▆▇█ 178 bpm</pre>
 </footer>
 
 <script src="script.js"></script>
