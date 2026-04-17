@@ -33,6 +33,7 @@ a{color:inherit;text-decoration:none}
 .topnav a{transition:color .2s}
 .topnav a:hover{color:var(--orange)}
 .topbar-right{color:var(--teal-bright)}
+#vcount{color:var(--orange);font-weight:700}
 @media (max-width:720px){
   .topbar{flex-wrap:wrap;gap:10px;font-size:11px}
   .topbar-right{display:none}
