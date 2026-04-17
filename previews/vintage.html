@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>COSDI // Vintage Poster</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;500;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#f3e7c7;
+  --cream-dark:#e6d4a8;
+  --ink:#1a1a1a;
+  --teal:#1b6b7e;
+  --red:#c23b22;
+  --orange:#e88c2b;
+  --navy:#132532;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  background:var(--cream);color:var(--ink);
+  font-family:"Inter",sans-serif;overflow-x:hidden;
+}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:100;
+  background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.55'/></svg>");
+  mix-blend-mode:multiply;opacity:.13;
+}
+a{color:inherit;text-decoration:none}
+
+.rail{
+  background:var(--ink);color:var(--cream);padding:10px 28px;
+  display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
+  font-family:"Oswald",sans-serif;font-size:11px;letter-spacing:.26em;text-transform:uppercase;
+}
+.rail .dot{color:var(--red)}
+
+.poster{
+  position:relative;overflow:hidden;padding:48px 28px 80px;
+  background:var(--cream);border-bottom:6px solid var(--ink);
+}
+.poster::before{content:"";position:absolute;top:-100px;right:-180px;width:640px;height:640px;background:var(--teal);transform:rotate(12deg);z-index:0}
+.poster::after{content:"";position:absolute;bottom:-120px;left:-140px;width:440px;height:440px;background:var(--orange);transform:rotate(-8deg);z-index:0;opacity:.92}
+.poster-inner{position:relative;z-index:2;max-width:1200px;margin:0 auto}
+
+.season-badge{
+  display:inline-block;border:2px solid var(--ink);padding:8px 18px;
+  font-family:"Oswald",sans-serif;font-size:13px;letter-spacing:.28em;text-transform:uppercase;
+  background:var(--cream);margin-bottom:28px;font-weight:700;
+}
+.wordmark{
+  font-family:"Bebas Neue",sans-serif;
+  font-size:clamp(120px,24vw,360px);line-height:.82;letter-spacing:-.02em;color:var(--ink);
+  display:block;
+}
+.wordmark .o{color:var(--red)}
+
+.stack{display:grid;grid-template-columns:auto 1fr;gap:32px;align-items:end;margin-top:8px}
+.year{font-family:"Bebas Neue",sans-serif;font-size:clamp(80px,12vw,160px);line-height:.85;color:var(--red);transform:rotate(-4deg)}
+.subhead{font-family:"Oswald",sans-serif;font-weight:500;text-transform:uppercase;letter-spacing:.1em;font-size:clamp(16px,1.9vw,26px);line-height:1.3}
+.subhead b{color:var(--teal);font-weight:700}
+
+.bars{display:flex;gap:10px;margin-top:36px;flex-wrap:wrap}
+.bar{padding:10px 18px;background:var(--ink);color:var(--cream);font-family:"Oswald",sans-serif;font-size:13px;letter-spacing:.22em;text-transform:uppercase;font-weight:500}
+.bar.red{background:var(--red)}
+.bar.teal{background:var(--teal)}
+.bar.outline{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+
+.stripe{height:34px;background:repeating-linear-gradient(45deg,var(--ink) 0 18px,var(--cream) 18px 36px)}
+
+.calendar{padding:72px 28px;max-width:1200px;margin:0 auto}
+.cal-head{display:flex;align-items:baseline;gap:24px;border-bottom:3px solid var(--ink);padding-bottom:20px;margin-bottom:24px;flex-wrap:wrap}
+.cal-head h2{font-family:"Bebas Neue",sans-serif;font-size:clamp(56px,8vw,110px);line-height:.85;letter-spacing:-.01em}
+.cal-head .tag{font-family:"Oswald",sans-serif;font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--red);font-weight:700}
+
+.cal-item{display:grid;grid-template-columns:140px 1fr auto;align-items:center;gap:24px;padding:20px 0;border-bottom:1px solid var(--ink)}
+.cal-num{font-family:"Bebas Neue",sans-serif;font-size:64px;line-height:.85;color:var(--red)}
+.cal-n{font-family:"Oswald",sans-serif;font-weight:700;font-size:clamp(22px,2.4vw,34px);text-transform:uppercase;letter-spacing:.02em}
+.cal-n small{display:block;font-weight:500;color:var(--teal);font-size:.6em;letter-spacing:.2em;margin-top:4px}
+.cal-l{font-family:"Oswald",sans-serif;font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--teal);text-align:right}
+.cal-item.home{background:var(--red);color:var(--cream);padding:20px 18px;margin:6px 0}
+.cal-item.home .cal-num,.cal-item.home .cal-n,.cal-item.home .cal-l{color:var(--cream)}
+.cal-item.home .cal-n small{color:var(--cream);opacity:.75}
+
+@media (max-width:720px){.cal-item{grid-template-columns:80px 1fr;gap:6px 16px}.cal-l{grid-column:2;text-align:left}.cal-num{font-size:44px}}
+
+.squad{padding:72px 28px;background:var(--navy);color:var(--cream);border-top:6px solid var(--ink);border-bottom:6px solid var(--ink)}
+.squad-head{max-width:1200px;margin:0 auto 28px;display:flex;gap:20px;align-items:baseline;border-bottom:2px solid var(--cream);padding-bottom:16px;flex-wrap:wrap}
+.squad-head h2{font-family:"Bebas Neue",sans-serif;font-size:clamp(56px,8vw,110px);line-height:.85}
+.squad-head .tag{color:var(--orange);font-family:"Oswald",sans-serif;font-size:12px;letter-spacing:.28em;text-transform:uppercase;font-weight:700}
+
+.squad-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.rider{background:var(--cream);color:var(--ink);padding:12px;border:2px solid var(--ink);position:relative}
+.rider .num{position:absolute;top:-14px;left:-14px;background:var(--red);color:var(--cream);width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:"Bebas Neue",sans-serif;font-size:20px;border:2px solid var(--ink)}
+.rider .face{aspect-ratio:1/1;background:linear-gradient(135deg,var(--teal),var(--navy));display:flex;align-items:center;justify-content:center;color:var(--cream);font-family:"Bebas Neue",sans-serif;font-size:64px;margin-bottom:10px;border:2px solid var(--ink)}
+.rider h3{font-family:"Oswald",sans-serif;font-size:15px;text-transform:uppercase;letter-spacing:.04em;font-weight:700}
+.rider p{font-family:"Oswald",sans-serif;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--teal);margin-top:4px}
+@media (max-width:820px){.squad-grid{grid-template-columns:repeat(2,1fr)}}
+
+.sponsors{padding:56px 28px;max-width:1200px;margin:0 auto}
+.spn-head{font-family:"Oswald",sans-serif;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--red);text-align:center;margin-bottom:24px;font-weight:700}
+.spn-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:2px solid var(--ink)}
+.spn{padding:28px 18px;border-right:1px solid var(--ink);border-bottom:1px solid var(--ink);font-family:"Bebas Neue",sans-serif;font-size:32px;line-height:.9;text-align:center;background:var(--cream)}
+.spn small{display:block;font-family:"Oswald",sans-serif;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--teal);margin-top:8px;font-weight:500}
+.spn:nth-child(3n){border-right:0}
+.spn:nth-last-child(-n+3){border-bottom:0}
+@media (max-width:820px){.spn-grid{grid-template-columns:repeat(2,1fr)}.spn{border-right:1px solid var(--ink) !important}.spn:nth-child(2n){border-right:0 !important}}
+
+.footer{background:var(--ink);color:var(--cream);padding:56px 28px;text-align:center;border-top:6px solid var(--red)}
+.footer .contact{font-family:"Bebas Neue",sans-serif;font-size:clamp(36px,5vw,72px);line-height:.9}
+.footer a{color:var(--orange)}
+.footer-meta{margin-top:20px;font-family:"Oswald",sans-serif;font-size:12px;letter-spacing:.26em;text-transform:uppercase;color:var(--cream-dark);font-weight:500}
+</style>
+</head>
+<body>
+
+<div class="rail">
+  <div><span class="dot">●</span>&nbsp; GRAND RAPIDS · MICHIGAN</div>
+  <div>COSDI × RACING · 2026 STAGIONE</div>
+  <div>TUTTI A BORDO</div>
+</div>
+
+<section class="poster">
+  <div class="poster-inner">
+    <span class="season-badge">2026 SQUADRA ★ STAGIONE</span>
+    <div class="wordmark">C<span class="o">O</span>SDI</div>
+    <div class="stack">
+      <div class="year">'26</div>
+      <div class="subhead">A <b>Grand Rapids, Michigan</b><br/>bicycle racing team.</div>
+    </div>
+    <div class="bars">
+      <span class="bar red">CRITERIUM</span>
+      <span class="bar teal">ROAD</span>
+      <span class="bar outline">7 STARTS</span>
+      <span class="bar">1 HOME</span>
+    </div>
+  </div>
+</section>
+
+<div class="stripe"></div>
+
+<section class="calendar">
+  <div class="cal-head"><h2>IL CALENDARIO</h2><span class="tag">2026 season · seven starts</span></div>
+  <div class="cal-item"><div class="cal-num">01</div><div class="cal-n">Snake Alley Criterium<small>Burlington, IA</small></div><div class="cal-l">MAY 23</div></div>
+  <div class="cal-item"><div class="cal-num">02</div><div class="cal-n">Tulsa Tough<small>Tulsa, OK</small></div><div class="cal-l">JUN 13</div></div>
+  <div class="cal-item"><div class="cal-num">03</div><div class="cal-n">Tour of America's Dairyland<small>Wisconsin</small></div><div class="cal-l">JUN 20</div></div>
+  <div class="cal-item"><div class="cal-num">04</div><div class="cal-n">Tour de France<small>France</small></div><div class="cal-l">JUL 04</div></div>
+  <div class="cal-item"><div class="cal-num">05</div><div class="cal-n">Intelligentsia Cup<small>Chicago, IL</small></div><div class="cal-l">JUL 18</div></div>
+  <a class="cal-item home" href="https://www.grandrivershootout.com" target="_blank" style="display:grid"><div class="cal-num">★</div><div class="cal-n">Grand River Shootout — HOME<small>Grand Rapids, MI</small></div><div class="cal-l">AUG 01–02</div></a>
+  <div class="cal-item"><div class="cal-num">07</div><div class="cal-n">MI State Championships<small>Holland, MI</small></div><div class="cal-l">SEP 19</div></div>
+</section>
+
+<section class="squad">
+  <div class="squad-head"><h2>LA SQUADRA</h2><span class="tag">Eleven on the roster</span></div>
+  <div class="squad-grid">
+    <div class="rider"><div class="num">1</div><div class="face">AK</div><h3>Andrew Koning</h3><p>Strava →</p></div>
+    <div class="rider"><div class="num">2</div><div class="face">CT</div><h3>Cameron Timmer</h3><p>Strava →</p></div>
+    <div class="rider"><div class="num">3</div><div class="face">CB</div><h3>Chris Boer</h3><p>Strava →</p></div>
+    <div class="rider"><div class="num">4</div><div class="face">DS</div><h3>Daniel Shamburger</h3><p>Strava →</p></div>
+  </div>
+</section>
+
+<section class="sponsors">
+  <div class="spn-head">★ Con il patrocinio di ★</div>
+  <div class="spn-grid">
+    <div class="spn">COSDI<small>Grand Rapids Oral Surgery</small></div>
+    <div class="spn">GREENLAND<small>Advanced Oral Care</small></div>
+    <div class="spn">MADCAP<small>Coffee Company</small></div>
+    <div class="spn">GFB<small>Gluten Free Bar</small></div>
+    <div class="spn">FREEWHEELER<small>Bike Shop</small></div>
+    <div class="spn">OUTPOST<small>Gear &amp; Provisions</small></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="contact"><a href="mailto:info@cosdiracing.com">info@cosdiracing.com</a></div>
+  <div class="footer-meta">Instagram · Facebook · Strava · Made in GR · MI</div>
+</footer>
+
+<p style="text-align:center;padding:20px;font-size:11px;color:#888"><a href="index.html" style="color:#888">← back to picker</a></p>
+</body>
+</html>

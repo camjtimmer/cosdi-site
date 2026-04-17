@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>COSDI // Design Alternatives</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,sans-serif;background:#0a0d10;color:#eee;padding:48px 24px;line-height:1.55;min-height:100vh}
+.wrap{max-width:1000px;margin:0 auto}
+h1{font-size:clamp(32px,5vw,52px);letter-spacing:-.02em;margin-bottom:10px;font-weight:800}
+.sub{color:#888;margin-bottom:36px;font-size:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.card{background:#13171b;border:1px solid #2a323a;padding:28px;text-decoration:none;color:inherit;transition:transform .2s,border-color .2s,background .2s;display:block}
+.card:hover{transform:translateY(-4px);border-color:#e8ff3d;background:#181d22}
+.num{display:inline-block;background:#e8ff3d;color:#0a0d10;padding:2px 10px;font-weight:800;margin-bottom:14px;font-size:12px;letter-spacing:.1em}
+.card h2{font-size:22px;margin-bottom:10px;font-weight:700}
+.card p{color:#8a9198;font-size:14px}
+.card .vibe{color:#e8ff3d;font-size:12px;margin-top:14px;letter-spacing:.08em;text-transform:uppercase}
+.foot{margin-top:48px;color:#555;font-size:13px}
+.foot a{color:#999}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>COSDI Racing</h1>
+  <p class="sub">Three design directions. Click any card to view the full prototype. Tell me which one (or which parts of which) to build on.</p>
+  <div class="grid">
+    <a href="editorial.html" class="card">
+      <span class="num">01</span>
+      <h2>Editorial / Magazine</h2>
+      <p>Serif display, generous whitespace, magazine-style layout. Premium, grown-up, photo-ready.</p>
+      <div class="vibe">Rouleur · Sunday paper</div>
+    </a>
+    <a href="vintage.html" class="card">
+      <span class="num">02</span>
+      <h2>Vintage Poster / Euro</h2>
+      <p>Italian Giro propaganda, condensed type, halftones, stamps, bib numbers. Print-feel and confident.</p>
+      <div class="vibe">Tutti a bordo</div>
+    </a>
+    <a href="brutalist.html" class="card">
+      <span class="num">03</span>
+      <h2>Brutalist / Terminal</h2>
+      <p>Dark, monospace, data-forward. Race-results tables, hairline rules, a quiet kind of weird.</p>
+      <div class="vibe">Commissaire mode</div>
+    </a>
+  </div>
+  <p class="foot">The current live site is at <a href="../">/</a>.</p>
+</div>
+</body>
+</html>

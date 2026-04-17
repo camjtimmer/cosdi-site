@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>COSDI // Editorial</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f6efe3;
+  --ink:#0f1a24;
+  --teal:#1b6b7e;
+  --orange:#c26a27;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:"Inter",sans-serif;line-height:1.55}
+
+.masthead{
+  display:grid;grid-template-columns:1fr auto 1fr;align-items:center;
+  padding:18px 40px;border-bottom:1px solid var(--ink);
+  font-family:"Inter",sans-serif;font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+}
+.masthead .center{font-family:"Playfair Display",serif;font-style:italic;font-size:22px;letter-spacing:0;text-transform:none;font-weight:900}
+.masthead .right{text-align:right;color:var(--teal)}
+
+.hero{padding:96px 40px 72px;max-width:1280px;margin:0 auto}
+.hero-kicker{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--teal);margin-bottom:24px}
+.hero h1{font-family:"Playfair Display",serif;font-style:italic;font-weight:900;font-size:clamp(72px,13vw,200px);line-height:.9;letter-spacing:-.02em}
+.hero h1 .amp{color:var(--orange);font-weight:400;font-style:italic}
+.hero-dek{font-family:"Playfair Display",serif;font-style:italic;font-weight:400;font-size:clamp(20px,2.2vw,32px);line-height:1.35;margin-top:32px;max-width:760px}
+.hero-dek em{color:var(--teal)}
+.hero-byline{margin-top:48px;font-size:11px;letter-spacing:.22em;text-transform:uppercase}
+.hero-byline span{display:inline-block;padding-right:24px;border-right:1px solid var(--ink);margin-right:24px}
+.hero-byline span:last-child{border-right:0;padding-right:0}
+
+.pullquote{
+  border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);
+  padding:40px;max-width:1280px;margin:0 auto;
+  display:grid;grid-template-columns:140px 1fr;gap:32px;align-items:start;
+}
+.pullquote .label{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--teal);padding-top:8px}
+.pullquote .drop{font-family:"Playfair Display",serif;font-style:italic;font-size:clamp(22px,2.4vw,30px);line-height:1.4}
+
+.section{max-width:1280px;margin:0 auto;padding:80px 40px}
+.section-head{display:flex;align-items:baseline;justify-content:space-between;border-bottom:1px solid var(--ink);padding-bottom:16px;margin-bottom:40px;gap:20px;flex-wrap:wrap}
+.section-head h2{font-family:"Playfair Display",serif;font-style:italic;font-weight:900;font-size:clamp(40px,5.5vw,68px);letter-spacing:-.01em}
+.section-head .meta{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--teal)}
+
+.calendar{border-top:1px solid var(--ink)}
+.cal-row{display:grid;grid-template-columns:120px 1fr 200px;align-items:baseline;padding:24px 0;border-bottom:1px solid var(--ink);gap:18px;transition:background .15s}
+.cal-row:hover{background:#ecdec4}
+.cal-date{font-family:"Playfair Display",serif;font-weight:700;font-size:28px;color:var(--orange)}
+.cal-name{font-family:"Playfair Display",serif;font-style:italic;font-size:24px;font-weight:700}
+.cal-name em{color:var(--teal);font-style:italic}
+.cal-loc{font-size:11px;letter-spacing:.22em;text-transform:uppercase;text-align:right;color:var(--teal)}
+.cal-row.featured{background:var(--ink);color:var(--paper);padding:28px 20px}
+.cal-row.featured:hover{background:var(--ink)}
+.cal-row.featured .cal-name,.cal-row.featured .cal-name em{color:var(--paper)}
+.cal-row.featured .cal-loc{color:#d9c8a6}
+.cal-row.featured a{color:var(--orange);text-decoration:none}
+@media (max-width:720px){.cal-row{grid-template-columns:100px 1fr;gap:6px 16px}.cal-loc{grid-column:2;text-align:left}}
+
+.roster{display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
+.profile .shot{aspect-ratio:4/5;background:linear-gradient(135deg,var(--teal),var(--ink));margin-bottom:14px;position:relative;overflow:hidden}
+.profile .shot span{position:absolute;bottom:10px;left:12px;color:var(--paper);font-family:"Playfair Display",serif;font-style:italic;font-size:46px;font-weight:900}
+.profile h3{font-family:"Playfair Display",serif;font-style:italic;font-size:22px;font-weight:700}
+.profile p{font-size:11px;color:var(--teal);letter-spacing:.18em;text-transform:uppercase;margin-top:4px}
+@media (max-width:820px){.roster{grid-template-columns:repeat(2,1fr)}}
+
+.partners{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--ink)}
+.partner{padding:40px 20px;border-bottom:1px solid var(--ink);border-right:1px solid var(--ink);font-family:"Playfair Display",serif;font-style:italic;font-weight:700;font-size:28px}
+.partner:nth-child(3n){border-right:0}
+.partner small{display:block;font-family:"Inter",sans-serif;font-style:normal;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--teal);font-weight:400;margin-top:8px}
+@media (max-width:720px){.partners{grid-template-columns:1fr}.partner{border-right:0}}
+
+.colophon{padding:72px 40px 24px;background:var(--ink);color:var(--paper)}
+.colophon .big{font-family:"Playfair Display",serif;font-style:italic;font-size:clamp(36px,5vw,64px);font-weight:700;margin-bottom:36px;max-width:1280px;margin-left:auto;margin-right:auto}
+.colophon a{color:var(--orange);text-decoration:none}
+.colophon-grid{max-width:1280px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;border-top:1px solid #5a6d7a;padding-top:20px;font-size:11px;letter-spacing:.22em;text-transform:uppercase}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div>VOL. XXVI &mdash; ISSUE 1</div>
+  <div class="center"><em>COSDI</em></div>
+  <div class="right">GRAND RAPIDS · MI</div>
+</header>
+
+<section class="hero">
+  <div class="hero-kicker">A Field Report &mdash; Season 2026</div>
+  <h1>Going<br/>In Circles,<br/><span class="amp">&amp;</span> Proud of It.</h1>
+  <p class="hero-dek">A <em>Grand Rapids, Michigan</em> bicycle racing team.</p>
+  <p class="hero-byline"><span>Eleven Riders</span><span>Seven Starts</span><span>One Home Weekend</span></p>
+</section>
+
+<div class="pullquote">
+  <div class="label">THE THESIS</div>
+  <div class="drop">We race bicycles &mdash; mostly criteriums, sometimes road, rarely well. What we lack in podiums we make up for in team-car snacks.</div>
+</div>
+
+<section class="section">
+  <div class="section-head">
+    <h2>The 2026 Calendar</h2>
+    <div class="meta">Seven Starts</div>
+  </div>
+  <div class="calendar">
+    <div class="cal-row"><div class="cal-date">MAY 23</div><div class="cal-name">Snake Alley Criterium</div><div class="cal-loc">Burlington, IA</div></div>
+    <div class="cal-row"><div class="cal-date">JUN 13</div><div class="cal-name">Tulsa Tough</div><div class="cal-loc">Tulsa, OK</div></div>
+    <div class="cal-row"><div class="cal-date">JUN 20</div><div class="cal-name">Tour of America's Dairyland</div><div class="cal-loc">Wisconsin</div></div>
+    <div class="cal-row"><div class="cal-date">JUL 04</div><div class="cal-name">Tour de France</div><div class="cal-loc">France</div></div>
+    <div class="cal-row"><div class="cal-date">JUL 18</div><div class="cal-name">Intelligentsia Cup</div><div class="cal-loc">Chicago, IL</div></div>
+    <a href="https://www.grandrivershootout.com" class="cal-row featured" target="_blank" style="text-decoration:none;color:inherit;display:grid">
+      <div class="cal-date">AUG 01</div>
+      <div class="cal-name">Grand River Shootout &mdash; <em>Home Weekend</em></div>
+      <div class="cal-loc">Grand Rapids, MI ↗</div>
+    </a>
+    <div class="cal-row"><div class="cal-date">SEP 19</div><div class="cal-name">Michigan State Championships</div><div class="cal-loc">Holland, MI</div></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <h2>The Roster</h2>
+    <div class="meta">Eleven Riders, One Kit</div>
+  </div>
+  <div class="roster">
+    <div class="profile"><div class="shot"><span>AK</span></div><h3>Andrew Koning</h3><p>Strava →</p></div>
+    <div class="profile"><div class="shot"><span>CT</span></div><h3>Cameron Timmer</h3><p>Strava →</p></div>
+    <div class="profile"><div class="shot"><span>CB</span></div><h3>Chris Boer</h3><p>Strava →</p></div>
+    <div class="profile"><div class="shot"><span>DS</span></div><h3>Daniel Shamburger</h3><p>Strava →</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <h2>The Partners</h2>
+    <div class="meta">Our Patrons</div>
+  </div>
+  <div class="partners">
+    <div class="partner">COSDI<small>Grand Rapids Oral Surgery</small></div>
+    <div class="partner">Greenland<small>Advanced Oral Care</small></div>
+    <div class="partner">Madcap<small>Coffee Company</small></div>
+    <div class="partner">GFB<small>The Gluten Free Bar</small></div>
+    <div class="partner">Freewheeler<small>Bike Shop</small></div>
+    <div class="partner">Outpost<small>Gear &amp; Provisions</small></div>
+  </div>
+</section>
+
+<footer class="colophon">
+  <div class="big"><a href="mailto:info@cosdiracing.com">info@cosdiracing.com</a></div>
+  <div class="colophon-grid">
+    <div>&copy; COSDI Racing</div>
+    <div>Grand Rapids · Michigan</div>
+    <div>Instagram · Facebook · Strava</div>
+  </div>
+</footer>
+
+<p style="text-align:center;padding:20px;font-size:11px;color:#888"><a href="index.html" style="color:#888">← back to picker</a></p>
+</body>
+</html>
