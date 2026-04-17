@@ -94,3 +94,62 @@ document.querySelectorAll(".sticker:not(.wobble)").forEach(s => {
   const r = (Math.random() * 14 - 7).toFixed(1);
   s.style.setProperty("transform", `rotate(${r}deg)`);
 });
+
+// cursor trail — small bolts left as you move (throttled)
+if (matchMedia("(pointer:fine)").matches) {
+  let last = 0;
+  document.addEventListener("mousemove", (e) => {
+    const now = performance.now();
+    if (now - last < 90) return;
+    last = now;
+    const s = document.createElement("span");
+    s.textContent = "⚡";
+    s.style.cssText = `
+      position:fixed;left:${e.clientX}px;top:${e.clientY}px;
+      transform:translate(-50%,-50%) rotate(${(Math.random()*60-30).toFixed(0)}deg);
+      font-size:${10 + Math.random()*8}px;
+      color:var(--orange);pointer-events:none;z-index:150;
+      opacity:.9;transition:opacity .9s ease, transform .9s ease;
+    `;
+    document.body.appendChild(s);
+    requestAnimationFrame(() => {
+      s.style.opacity = "0";
+      s.style.transform += ` translateY(-20px)`;
+    });
+    setTimeout(() => s.remove(), 950);
+  });
+}
+
+// fake visitor counter that increments with random cadence
+const vc = document.getElementById("vcount");
+if (vc) {
+  let n = 42 + Math.floor(Math.random() * 300);
+  const pad = (x) => String(x).padStart(7, "0");
+  vc.textContent = pad(n);
+  setInterval(() => {
+    if (Math.random() < 0.4) {
+      n += 1 + Math.floor(Math.random() * 3);
+      vc.textContent = pad(n);
+    }
+  }, 1800);
+}
+
+// SPACE = lightning storm
+document.addEventListener("keydown", (e) => {
+  if (e.code === "Space" && !e.target.matches("input,textarea")) {
+    e.preventDefault();
+    for (let i = 0; i < 14; i++) {
+      setTimeout(() => {
+        const bolt = document.createElement("div");
+        bolt.className = "spawn-bolt";
+        bolt.innerHTML = `<svg viewBox="0 0 40 80" width="28" height="56"><path d="M22 0 L0 48 L14 48 L8 80 L40 28 L24 28 Z" fill="currentColor"/></svg>`;
+        bolt.style.left = (Math.random() * window.innerWidth) + "px";
+        bolt.style.top = (Math.random() * 100) + "px";
+        const colors = ["var(--orange)","var(--pink)","var(--acid)","var(--teal-bright)"];
+        bolt.style.color = colors[i % colors.length];
+        document.body.appendChild(bolt);
+        setTimeout(() => bolt.remove(), 1300);
+      }, i * 60);
+    }
+  }
+});
